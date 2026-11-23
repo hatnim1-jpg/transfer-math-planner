@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FBF7EE">
+<title>편입수학 플래너</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-title">편입수학 플래너</div>
+  <button class="icon-btn" data-action="open-settings" aria-label="설정">⚙︎</button>
+</header>
+<main id="view" aria-live="polite"></main>
+<button id="minibar" class="minibar" hidden aria-label="진행 중인 타이머 열기"></button>
+<nav class="tabbar" id="tabbar" aria-label="하단 메뉴">
+  <button data-tab="today"><span class="ico">☀︎</span>오늘</button>
+  <button data-tab="calendar"><span class="ico">▦</span>캘린더</button>
+  <button data-tab="lectures"><span class="ico">☰</span>강의</button>
+  <button data-tab="review"><span class="ico">↻</span>복습</button>
+  <button data-tab="stats"><span class="ico">◔</span>통계</button>
+</nav>
+<div id="sheet" class="sheet-wrap" hidden>
+  <div class="sheet-bg" data-action="close-sheet"></div>
+  <div class="sheet" role="dialog" aria-modal="true"><div id="sheet-body"></div></div>
+</div>
+<script src="lectures.js"></script>
+<script src="engine.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
